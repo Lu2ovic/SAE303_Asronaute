@@ -1,0 +1,26 @@
+body{
+    background-color: rgb(17, 3, 31);
+}
+
+.zone{
+    padding: 16px;
+    margin:10px;
+}
+
+
+.hautF{
+    position:relative;
+    width: 40px;
+    top: 20px;
+    left: 0px;
+}
+
+.basF{
+    width: 80px;
+}
+
+.tronc{
+    width: 40px;
+    height: 80px;
+    background-color: rgb(250, 173, 73);
+}
