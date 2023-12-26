@@ -1,5 +1,5 @@
 :root{
-    --Space: #0A0321;
+    --Space: #070314;
     --BlancCasse: #ECEAE4;
     --Blanc: #fff;
     --Bleu: #286292;
@@ -8,20 +8,44 @@
 }
 
 body{
-    background-color: var(--space);
+    background-color: var(--Space);
+    color: var(--Blanc);
 }
+
+
+H1{
+    font-family : 'Sansita', sans-serif ;
+    font-size: 76px;
+    text-align: center;
+}
+
+p{
+    color: var(--Blanc);
+}
+
+/* !!!!!!!!!!!!!!!!!!!!      Partie pour les fusées      !!!!!!!!!!!!!!!!!!!!  */
 
 .zone{
     padding: 16px;
     margin:10px;
     display: flex;
     align-items: flex-start;
+    font-family: 'Sansita', sans-serif;
+    font-size: 18px;
 }
 
 .fusee{
     text-align: center;
     width: 80px;
     align-self:flex-end;
+}
+
+.vol{
+    transition: transform 0.5s ease-out 0.1s;
+}
+
+.fusee:hover .vol{
+    transform: translateY(-60px);
 }
 
 .hautF{
@@ -31,12 +55,6 @@ body{
     z-index: 1;
 }
 
-.basF{
-    width: 68px;
-    position:relative;
-    top: -80px;
-    margin-bottom: -80px;
-}
 
 .tronc{
     width: 40px;
@@ -53,7 +71,132 @@ body{
     padding-top: 40px;
 }
 
-p{
-    color:aliceblue;
+
+.basF{
+    width: 68px;
+    position:relative;
+    top: -80px;
+    margin-bottom: -80px;
+    z-index: 1;
 }
 
+.boost{
+    margin: -4.4px 7px 0px 7px ;
+    display: flex;
+    gap: 3.3px;
+    position:absolute;
+    z-index: 0;
+}
+
+.petitBoost{
+    background-color: #C33029;
+    width: 13px;
+    height: 0px;
+    border-radius: 0 0 4px 4px;
+    transition: height 0.3s ease-out 0.4s;
+}
+
+.petitBoost .feu2{
+    transition: height 0.4s ease-out 0.3s;
+}
+
+.petitBoost .feu3{
+
+    transition: height 0.2s ease-out 0.2s;
+}
+
+
+.feu1{
+    background-color: #C33029;
+    width: 15px;
+    height: 0px;
+    border-radius: 0 0 4px 4px;
+    transition: height 0.4s ease-out 0.2s;
+}
+
+.feu2{
+    background-color: #ff7300d6;
+    padding: 0px 1px 0px 1px;
+    height: 0px;
+    margin:0 0.5px 0 0.5px;
+    border-radius: 0 0 4px 4px;
+    transition: height 0.6s ease-out 0.1s;
+}
+
+.feu3{
+    background-color: #ffab02d4;
+    padding: 0 2px 0px 2px;
+    height: 0px;
+    margin:  0 0.2px 0px 0.2px;
+    border-radius: 0 0 4px 4px;
+    transition: height 0.3s ease-out;
+}
+
+/* animation flammes */
+
+.fusee:hover .feu1{
+    height: 10px;
+}
+
+.fusee:hover .feu2{
+    height: 6px;
+}
+
+.fusee:hover .feu3{
+    height: 2.4px;
+}
+
+
+.fusee:hover .petitBoost{
+    height: 7px;
+}
+
+.fusee:hover .petitBoost .feu2{
+    height: 5px;
+}
+
+.fusee:hover .petitBoost .feu3{
+    height: 2px;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!      Partie pour les fusées      !!!!!!!!!!!!!!!!!!!!  */
+
+/* !!!!!!!!!!!!!!!!!!!!      Partie astronaute     !!!!!!!!!!!!!!!!!!!!  */
+
+#astronaute{
+    height: 500px;
+}
+
+#casque{
+    transition: opacity 0.6s ease-out;
+}
+
+
+#astronaute:hover #casque{
+    opacity: 0%;
+
+}
+
+.combi{
+    position: relative;
+    z-index: 1;
+}
+
+.youri{
+    height: 170px;
+    position: absolute;
+    z-index: -1;
+    transform: translateX(-360px) scaleX(-1) rotateZ(20deg) translateY(-20px);
+}
+
+
+/* !!!!!!!!!!!!!!!!!!!!      Partie astronaute     !!!!!!!!!!!!!!!!!!!!  */
+
+@keyframes grow-progress {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
