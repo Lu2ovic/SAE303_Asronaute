@@ -28,15 +28,17 @@ p{
 .zone{
     padding: 16px;
     margin:10px;
+    padding-top: 40px;
     display: flex;
     align-items: flex-start;
     font-family: 'Sansita', sans-serif;
     font-size: 18px;
+    overflow-x: auto;
 }
 
 .fusee{
     text-align: center;
-    width: 80px;
+    min-width: 80px;
     align-self:flex-end;
 }
 
@@ -45,8 +47,9 @@ p{
 }
 
 .fusee:hover .vol{
-    transform: translateY(-60px);
+    transform: translateY(-60px) rotate(1.6deg);
 }
+
 
 .hautF{
     position:relative;
@@ -180,6 +183,8 @@ p{
 .combi{
     position: relative;
     z-index: 1;
+    animation: gravite 38s linear infinite;
+    width: 500px;
 }
 
 .youri{
@@ -189,8 +194,21 @@ p{
     transform: translateX(-360px) scaleX(-1) rotateZ(20deg) translateY(-20px);
 }
 
+@keyframes gravite {
+    0% {
+      transform: rotateZ(-35deg) scale(0.70);
+    }
+    50% {
+      transform: rotateZ(65deg) scale(1);
+    }
+    100% {
+        transform: rotateZ(-35deg) scale(0.70);
+      }
+  }
 
 /* !!!!!!!!!!!!!!!!!!!!      Partie astronaute     !!!!!!!!!!!!!!!!!!!!  */
+
+
 
 @keyframes grow-progress {
     from {
