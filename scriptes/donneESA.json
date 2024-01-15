@@ -1,0 +1,155 @@
+{
+    "Candidat": [
+        {
+        "Pays": "Autriche",
+        "Homme": 350,
+        "Femme": 116,
+        "Coordonée": [47.376788,14.241903] 
+        },
+        {
+        "Pays": "Belgique",
+        "Homme": 771,
+        "Femme": 230,
+        "Coordonée": [50.386603, 4.781652]      
+        },
+        {
+        "Pays": "République Tchèque",
+        "Homme": 167,
+        "Femme": 37,
+        "Coordonée": [49.629213, 14.976549]
+        },
+        {
+        "Pays": "Danemark",
+        "Homme": 110,
+        "Femme": 35,
+        "Coordonée": [55.313670, 10.178387]
+        },
+        {
+        "Pays": "Estonie",
+        "Homme": 35,
+        "Femme": 22,
+        "Coordonée": [58.312471, 26.180846]
+        },
+        {
+        "Pays": "Finlande",
+        "Homme": 250,
+        "Femme": 58,
+        "Coordonée": [62.274521, 26.573641]
+        },
+        {
+        "Pays": "France",
+        "Homme": 5443,
+        "Femme": 1664,
+        "Coordonée": [47.107047, 2.281971]    
+        },
+        {
+        "Pays": "Allemagne",
+        "Homme": 2660,
+        "Femme": 1035,
+        "Coordonée": [50.414418, 10.104369]
+        },
+        {
+        "Pays": "Grèce",
+        "Homme": 221,
+        "Femme": 60,
+        "Coordonée": [38.518410, 21.834668]
+        },
+        {
+        "Pays": "Hongrie",
+        "Homme": 115,
+        "Femme": 34,
+        "Coordonée": [46.632442, 19.265781]
+        },
+        {
+        "Pays": "Irlande",
+        "Homme": 198,
+        "Femme": 78,
+        "Coordonée": [52.530660, -7.891224]
+        },
+        {
+        "Pays": "Italy",
+        "Homme": 1498,
+        "Femme": 347,
+        "Coordonée": [42.369872, 12.169425]
+        },
+        {
+        "Pays": "Lettonie",
+        "Homme": 60,
+        "Femme": 23,
+        "Coordonée": [56.625320, 26.085538]
+        },
+        {
+        "Pays": "Lituanie",
+        "Homme": 62,
+        "Femme": 18,
+        "Coordonée": [55.138609, 23.898468]
+        },
+        {
+        "Pays": "Luxembourg",
+        "Homme": 52,
+        "Femme": 12,
+        "Coordonée": [49.575303, 6.122210]    
+        },
+        {
+        "Pays": "Pays-Bas",
+        "Homme": 686,
+        "Femme": 296,
+        "Coordonée": [51.990214, 5.697640]    
+        },
+        {
+        "Pays": "Norvège",
+        "Homme": 262,
+        "Femme": 57,
+        "Coordonée": [60.873354, 8.777542]    
+        },
+        {
+        "Pays": "Pologne",
+        "Homme": 421,
+        "Femme": 128,
+        "Coordonée": [52.122926, 18.973427]
+        },
+        {
+        "Pays": "Portugal",
+        "Homme": 259,
+        "Femme": 61,
+        "Coordonée": [39.872469, -8.014599]
+        },
+        {
+        "Pays": "Roumanie",
+        "Homme": 199,
+        "Femme": 55,
+        "Coordonée": [45.307664, 24.612528]
+        },
+        {
+        "Pays": "Slovénie",
+        "Homme": 49,
+        "Femme": 13,
+        "Coordonée": [45.876271, 14.693769]
+        },
+        {
+        "Pays": "Espagne",
+        "Homme": 1043,
+        "Femme": 298,
+        "Coordonée": [39.222640, -2.476401]
+        },
+        {
+        "Pays": "Suède",
+        "Homme": 230,
+        "Femme": 51,
+        "Coordonée": [61.531849, 15.629476]
+        },
+        {
+        "Pays": "Suisse",
+        "Homme": 549,
+        "Femme": 119,
+        "Coordonée": [46.699502, 8.056768]
+        }
+        ],
+    "SélectionCV": 1361,
+    "ValideTest": 400,
+    "CandidatsFinaux": 17,
+    "Astronautes": 5,
+    "Reserviste": 11,
+    "AstronautesHandicape": 1,
+    "Date": 2022
+    }

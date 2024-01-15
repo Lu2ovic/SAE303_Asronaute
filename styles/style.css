@@ -5,6 +5,7 @@
     --Bleu: #286292;
     --BleuClaire: #4B92BB;
     --Rouge: #C33029;
+    --Txtnumerique: #40AE93;
 }
 
 body{
@@ -162,12 +163,109 @@ p{
     height: 2px;
 }
 
+/* !!!     Partie Mini fusées      !!!  */
+
+.MiniBoost{
+    margin: -12px 0px 0px 0px ;
+    display: flex;
+    position:absolute;
+    z-index: -1;
+}
+
+.MiniBoost .feu1{
+    border-radius: 6px;
+    width: 40px;
+    animation: fire1 0.7s ease infinite;
+}
+
+.MiniBoost .feu2{
+    border-radius: 6px;
+    width: 37px;
+    animation: fire2 0.7s ease infinite -0.1s;
+}
+
+.MiniBoost .feu3{
+    border-radius: 6px;
+    width: 33px;
+    animation: fire3 0.7s ease infinite -0.2s;
+}
+
+@keyframes fire1 {
+    0% { 
+        height: 18px;
+    }
+    50% { 
+        height: 24px;
+    }
+    100% { 
+        height: 18px;
+    }
+  }
+
+@keyframes fire2 {
+    0% { 
+        height: 13px;
+    }
+    50% { 
+        height: 19px;
+    }
+    100% { 
+        height: 13px;
+    }
+  }
+
+  @keyframes fire3 {
+    0% { 
+        height: 7px;
+    }
+    50% { 
+        height: 12px;
+    }
+    100% { 
+        height: 7px;
+    }
+  }
+  /* !!!      chemin MiniFusée     !!!  */
+  .motion-object {
+    offset-path: path('M225.791 6C127.217 95.5157 99.2158 277.37 256.827 442.852C414.155 608.037 22.2013 635.926 6 923'); /* this is a square path */
+    animation: move 5s linear forwards;
+    transition: offset-path 0.6s ease-out;
+    transform: rotate(90deg);
+    width: 40px;
+    height: 40px;
+  }
+  
+  @keyframes move {
+    0% { 
+      offset-distance: 0%;
+    }
+    100% { 
+      offset-distance: 100%;
+    }
+  }
+  
+  /* deco */
+
+
+  @media screen and (min-width: 900px) {
+    .motion-object {
+        offset-path: path('M569 6C316.5 235.5 244.775 701.738 648.5 1126C1051.5 1549.5 47.5 1621 6 2357'); /* this is a square path */
+        animation-duration: 10s;
+      }
+  }
+  
+  /* !!!      chemin MiniFusée     !!!  */
+
 /* !!!!!!!!!!!!!!!!!!!!      Partie pour les fusées      !!!!!!!!!!!!!!!!!!!!  */
 
 /* !!!!!!!!!!!!!!!!!!!!      Partie astronaute     !!!!!!!!!!!!!!!!!!!!  */
 
 #astronaute{
     height: 500px;
+}
+
+.inverse{
+    transform: scaleX(-1);
 }
 
 #casque{
@@ -183,53 +281,220 @@ p{
 .combi{
     position: relative;
     z-index: 1;
-    animation: gravite 38s linear infinite;
+    animation: gravite 38s linear infinite var(--Adeley);
     width: 500px;
 }
 
-.youri{
-    height: 170px;
+.AsCombi{
+    height: 120px;
     position: absolute;
     z-index: -1;
-    transform: translateX(-360px) scaleX(-1) rotateZ(20deg) translateY(-20px);
+    transform: translateX(-310px) rotateZ(-20deg) translateY(0px);
 }
 
 @keyframes gravite {
     0% {
-      transform: rotateZ(-35deg) scale(0.70);
+      transform: rotateZ(-35deg) scale(var(--sens),0.70) translate(0px,0px);
     }
     50% {
-      transform: rotateZ(65deg) scale(1);
+      transform: rotateZ(65deg) scale(var(--sens1),1) translate(20px,-4px);
     }
     100% {
-        transform: rotateZ(-35deg) scale(0.70);
+        transform: rotateZ(-35deg) scale(var(--sens),0.70) translate(0px,0px);
       }
   }
 
 /* !!!!!!!!!!!!!!!!!!!!      Partie astronaute     !!!!!!!!!!!!!!!!!!!!  */
 
-
-#img5 {
+/* !!!!!!!!!!!!!!!!!!!!      Images Illustration    !!!!!!!!!!!!!!!!!!!!  */
+#imgS {
     border-radius: 50px;
     filter: blur(5px);
     height:300px;
     opacity: 10%;
     transition: border-radius 1.3s, transform 1.7s, filter 1.3s, opacity 0.6s ease-out;
-    transform: scale(0.70);
+    transform: scale(0.70) rotate(5deg);
   }
 
-  #img5:hover{
+  #imgS:hover{
     filter: blur(0px);
     opacity: 100%;
-    transform: scale(1) rotate(5deg);
+    transform: scale(1) rotate(0deg);
     border-radius: 4px;
   }
 
-@keyframes grow-progress {
-    from {
-      transform: scaleX(0);
+/* !!!!!!!!!!!!!!!!!!!!      Images Illustration    !!!!!!!!!!!!!!!!!!!!  */
+
+/* !!!!!!!!!!!!!!!!!!!!      Tableau de bord ESA    !!!!!!!!!!!!!!!!!!!!  */
+
+.TableauBord{
+    font-family: "univia-pro", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 0px 0px 1.6px var(--Txtnumerique);
+    background-color: #B7B3A7;
+    border: 14px solid #2F304E;
+    padding:30px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "titre titre titre"
+        "repart repart carte"
+        "selection selection selection";
+}
+
+#titreTab{
+    grid-area: titre;
+    margin: 6px auto 10px auto;
+    font-size: 16px;
+}
+
+.ZoneTxt{
+    font-size: 12px;
+    background-color: #171E2E;
+    margin:5px;
+    padding:10px;
+    color:var(--Txtnumerique);
+    border-radius: 4px;
+    text-align: center;
+}
+
+.jauge{
+    width: 130px;
+}
+
+#Ljauge{
+    animation: Remplissage 0.8s ease-in-out forwards;
+}
+
+@keyframes Remplissage {
+    0% { 
+        stroke-dasharray: 0px 300px;
     }
-    to {
-      transform: scaleX(1);
+    70% { 
+        stroke-dasharray: calc(var(--dimension) + 20px) 300px;
+    }
+    85% { 
+        stroke-dasharray: calc(var(--dimension) - 20px) 300px;
+    }
+    100% { 
+        stroke-dasharray: var(--dimension) 300px;
     }
   }
+
+/* !!!    Répartition hommes/femmes    !!!  */
+
+#repartition{
+    grid-area: repart;
+    padding:20px;
+}
+
+#repartition>div{
+    display: flex;
+    gap:30px;
+}
+
+#selection{
+    grid-area: selection;
+    padding:20px;
+}
+
+.zoneIcone>div>img{
+    height: 80px;
+    margin:6px;
+}
+
+.decoTabBord{
+    margin-top: 35px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.guide{
+    width: 456px;
+}
+
+#curceur{
+    height: 100px;
+    offset-path: path('M6 6L449.46 8.2'); /* this is a square path */
+    animation: arrive 0.8s ease-in-out forwards;
+    margin-bottom: -110px;
+}
+
+  
+  @keyframes arrive {
+    0% { 
+      offset-distance: 10%;
+    }
+    70% { 
+        offset-distance: calc(var(--position) + 4%);
+    }
+    85% { 
+        offset-distance: calc(var(--position) - 4%);
+    }
+    100% { 
+      offset-distance: var(--position);
+    }
+  }
+
+.ESAresultat{
+    display: flex;
+}
+
+.zoneIcone{
+    width: auto;
+    margin: auto;
+}
+
+
+/* !!!    Carte    !!!  */
+
+#map {
+    height: 30dvw;
+    width: 30dvw;
+    background-color: #F9F4E5;
+}
+
+#carte{
+    grid-area: carte;
+}
+
+.carte{
+    padding: 20px;
+    background-color: #F9F4E5;
+    border-radius: 10px;
+}
+
+.custom-popup .leaflet-popup-content-wrapper {
+    background:#171E2E;
+    color:var(--Txtnumerique);
+    font-size:12px;
+    line-height:24px;
+    }
+.custom-popup .leaflet-popup-content-wrapper .Tpopup {
+    font-size: 16px;
+    }
+
+.custom-popup .leaflet-popup-content-wrapper .Rpopup {
+    margin: 6px;
+    }
+    
+.custom-popup .leaflet-popup-tip {
+    display: none;
+    }
+
+.Pbox{
+    display: flex;
+    gap:6px;
+}
+
+
+
+
+
+/* !!!!!!!!!!!!!!!!!!!!      Tableau de bord ESA    !!!!!!!!!!!!!!!!!!!!  */
+
+
