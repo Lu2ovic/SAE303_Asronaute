@@ -11,18 +11,67 @@
 body{
     background-color: var(--Space);
     color: var(--Blanc);
+    font-family:"univia-pro";
+    
 }
 
 
 H1{
-    font-family : 'Sansita', sans-serif ;
+    font-family : "ff-cocon-pro";
     font-size: 76px;
     text-align: center;
 }
 
-p{
-    color: var(--Blanc);
+h3{
+    text-align: center;
+    font-size: 24px;
 }
+
+p{
+    font-size: 12px;
+    font-style: italic;
+}
+
+
+
+/* !!!!!!!!!!!!!!!!!!!!      frise chronologique      !!!!!!!!!!!!!!!!!!!!  */
+
+.évènement>div{
+    display: block;
+    background-color: #286292;
+    
+}
+
+.évènement>div:nth-child(2){
+    background-color: #28924f;
+}
+
+.évènement{
+    padding: 20px;
+}
+
+.date{
+    font-family : "ff-cocon-pro";
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 800;
+    text-align: center;
+    margin: auto;
+}
+
+.explication{
+    width: 40%;
+    height:40dvw;
+    background-color: #C33029;
+}
+
+.explication>p{
+    text-align: center;
+}
+
+
+
+/* !!!!!!!!!!!!!!!!!!!!      frise chronologique      !!!!!!!!!!!!!!!!!!!!  */
 
 /* !!!!!!!!!!!!!!!!!!!!      Partie pour les fusées      !!!!!!!!!!!!!!!!!!!!  */
 
@@ -227,10 +276,12 @@ p{
   }
   /* !!!      chemin MiniFusée     !!!  */
   .motion-object {
-    offset-path: path('M225.791 6C127.217 95.5157 99.2158 277.37 256.827 442.852C414.155 608.037 22.2013 635.926 6 923'); /* this is a square path */
+    offset-path: path('M264.5 2.5C74 120.5 29.5 222 4.99988 475C-34.1823 879.614 328.5 699 327 1196C325.825 1585.5 9.00025 1347 12.5003 1865C12.5003 2243.5 177.5 2300 263 2311'); /* this is a square path */
     animation: move 5s linear forwards;
     transition: offset-path 0.6s ease-out;
     transform: rotate(90deg);
+    margin-left: 26dvw;
+    margin-top: 20px;
     width: 40px;
     height: 40px;
   }
@@ -249,9 +300,49 @@ p{
 
   @media screen and (min-width: 900px) {
     .motion-object {
-        offset-path: path('M569 6C316.5 235.5 244.775 701.738 648.5 1126C1051.5 1549.5 47.5 1621 6 2357'); /* this is a square path */
+        offset-path: path('M1.5 2C320 138 469 418 276 1003.5C83 1589 511.176 2210.35 396 2543.5C275 2893.5 206 3211.5 780 3268.5'); /* this is a square path */
         animation-duration: 10s;
       }
+
+
+
+    .évènement>div{
+        display: flex;
+        
+    }
+    .évènement{
+        padding: 20px;
+    }
+    
+    .date{
+        font-family : "ff-cocon-pro";
+        font-size: 126px;
+        font-style: italic;
+        font-weight: 800;
+        text-align: center;
+        margin: auto;
+    }
+    
+    .explication{
+        width: 40%;
+        margin: auto;
+    }
+    
+    .explication>p{
+        text-align: center;
+    }
+
+
+    h3{
+        text-align: center;
+        font-size: 35px;
+    }
+    
+    p{
+        font-size: 24px;
+        font-style: italic;
+    }
+
   }
   
   /* !!!      chemin MiniFusée     !!!  */
@@ -283,6 +374,7 @@ p{
     z-index: 1;
     animation: gravite 38s linear infinite var(--Adeley);
     width: 500px;
+    margin: auto;
 }
 
 .AsCombi{
@@ -310,7 +402,7 @@ p{
 #imgS {
     border-radius: 50px;
     filter: blur(5px);
-    height:300px;
+    height:40dvw;
     opacity: 10%;
     transition: border-radius 1.3s, transform 1.7s, filter 1.3s, opacity 0.6s ease-out;
     transform: scale(0.70) rotate(5deg);
@@ -496,5 +588,3 @@ p{
 
 
 /* !!!!!!!!!!!!!!!!!!!!      Tableau de bord ESA    !!!!!!!!!!!!!!!!!!!!  */
-
-

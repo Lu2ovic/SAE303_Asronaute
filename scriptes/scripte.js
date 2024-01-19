@@ -2,11 +2,13 @@
 ///////////// Graphique de fusée         //////////        //////////    /////////
 
 const DonneFuse = './scriptes/donne.json';
-const DonneESA = './scriptes/donneESA.json'
+const DonneESA = './scriptes/donneESA.json';
+
 
 async function ConstructionFuse() {
   const response = await fetch(DonneFuse);
   const data = await response.json();
+  //const data = 'donne.json';
   const ListeNbr=[];
   for (let i = 0; i < data.length; i++) {
     ListeNbr.push(data[i].nbrPersonnesEspace);
@@ -77,24 +79,24 @@ async function TableBordESA() {
           <svg id="curceur" style="--position:${(100*totalHomme/totalCandidat)}%" data-name="curceur" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 73.04 107.29">
             <defs>
               <style>
-                .cls-1 {
+                .clsb-1 {
                   fill: #980e29;
                 }
           
-                .cls-1, .cls-2 {
+                .clsb-1, .clsb-2 {
                   stroke-width: 0px;
                 }
           
-                .cls-2 {
+                .clsb-2 {
                   fill: #dc183c;
                 }
               </style>
             </defs>
             <g id="Calque_1-2" data-name="Calque 1">
               <g>
-                <rect class="cls-2" width="73.04" height="107.29" rx="19.88" ry="19.88"/>
-                <rect class="cls-1" x="46.4" y="14.85" width="12.22" height="74.72" rx="5.4" ry="5.4"/>
-                <rect class="cls-1" x="15.34" y="14.85" width="12.22" height="74.72" rx="5.4" ry="5.4"/>
+                <rect class="clsb-2" width="73.04" height="107.29" rx="19.88" ry="19.88"/>
+                <rect class="clsb-1" x="46.4" y="14.85" width="12.22" height="74.72" rx="5.4" ry="5.4"/>
+                <rect class="clsb-1" x="15.34" y="14.85" width="12.22" height="74.72" rx="5.4" ry="5.4"/>
               </g>
             </g>
           </svg>
