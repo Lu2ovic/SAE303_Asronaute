@@ -1,0 +1,87 @@
+@media screen and (min-width: 480px) {
+    .motion-object {
+        offset-path: path('M1.5 2C320 138 469 418 276 1003.5C83 1589 511.176 2210.35 396 2543.5C275 2893.5 206 3211.5 780 3268.5'); /* this is a square path */
+        animation-duration: 10s;
+      }
+
+
+
+    .évènement>div{
+        display: flex;
+        
+    }
+    .évènement{
+        padding: 20px;
+    }
+    
+    .date{
+        font-family : "ff-cocon-pro";
+        font-size: 126px;
+        font-style: italic;
+        font-weight: 800;
+        text-align: center;
+        margin: auto;
+    }
+    
+    .explication{
+        width: 40%;
+        margin: auto;
+    }
+    
+    .explication>p{
+        text-align: center;
+    }
+
+
+    h3{
+        text-align: center;
+        font-size: 35px;
+    }
+    
+    p{
+        font-size: 24px;
+        font-style: italic;
+    }
+
+
+
+
+
+    /* !!!!!!!!!!!!!!!!!!!!      Tableau de bord ESA    !!!!!!!!!!!!!!!!!!!!  */
+
+    .TableauBord{
+        padding:30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "titre titre titre"
+            "repart repart carte"
+            "selection selection selection";
+    }
+
+
+    #titreTab{
+        margin: 6px auto 10px auto;
+        font-size: 16px;
+    }
+    
+    .ZoneTxt{
+        font-size: 12px;
+        background-color: #171E2E;
+        margin:5px;
+        padding:10px;
+        color:var(--Txtnumerique);
+        border-radius: 4px;
+        text-align: center;
+    }
+
+
+    /* !!!    Carte    !!!  */
+    #map {
+        height: 30dvw;
+        width: 30dvw;
+    }
+
+  }

@@ -107,12 +107,12 @@ async function TableBordESA() {
         <div class="ZoneTxt"><div id="titreTab">FEMMES</div> ${totalFemme}  candidatures</div>
       </div>
       <div class="decoTabBord">
-        <img src="images/DecoTabBord.svg" alt="boutons et graphiques tableau de bord"/>
+        <img class="responsiveImg" src="images/DecoTabBord.svg" alt="boutons et graphiques tableau de bord"/>
       </div>
-      <div>
+      <div class="ZoneJauge">
         <div class="ZoneTxt jauge">
           <div id="titreTab">Candidatures Total</div> 
-          <svg width="113" height="199" viewBox="0 0 113 199" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="responsiveImgJ" width="113" height="199" viewBox="0 0 113 199" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_59_1022)">
           <path d="M97.06 4.5H14.99C9.19653 4.5 4.5 9.19653 4.5 14.99V183.27C4.5 189.063 9.19653 193.76 14.99 193.76H97.06C102.853 193.76 107.55 189.063 107.55 183.27V14.99C107.55 9.19653 102.853 4.5 97.06 4.5Z" stroke="#B7B3A7" stroke-width="9" stroke-miterlimit="10"/>
           <path d="M31.57 21.5601H14.91V183.24H31.57V21.5601Z" stroke="#B7B3A7" stroke-width="3" stroke-miterlimit="10"/>
@@ -142,7 +142,7 @@ async function TableBordESA() {
         </div>
         <div class="ZoneTxt jauge">
           <div id="titreTab">Sélectionnés sur CV</div> 
-          <svg width="113" height="199" viewBox="0 0 113 199" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="responsiveImgJ" width="113" height="199" viewBox="0 0 113 199" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_60_1058)">
             <path d="M97.06 4.5H14.99C9.19653 4.5 4.5 9.19653 4.5 14.99V183.27C4.5 189.063 9.19653 193.76 14.99 193.76H97.06C102.853 193.76 107.55 189.063 107.55 183.27V14.99C107.55 9.19653 102.853 4.5 97.06 4.5Z" stroke="#B7B3A7" stroke-width="9" stroke-miterlimit="10"/>
             <path d="M31.57 21.5601H14.91V183.24H31.57V21.5601Z" stroke="#B7B3A7" stroke-width="3" stroke-miterlimit="10"/>
@@ -171,8 +171,8 @@ async function TableBordESA() {
           <div>${donne.SélectionCV} candidats</div>
         </div>
         <div class="ZoneTxt jauge">
-          <div id="titreTab">Tests et entretient validé</div> 
-          <svg width="113" height="199" viewBox="0 0 113 199" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <div id="titreTab">Tests/entretiens validé</div> 
+          <svg class="responsiveImgJ" width="113" height="199" viewBox="0 0 113 199" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_60_1058)">
             <path d="M97.06 4.5H14.99C9.19653 4.5 4.5 9.19653 4.5 14.99V183.27C4.5 189.063 9.19653 193.76 14.99 193.76H97.06C102.853 193.76 107.55 189.063 107.55 183.27V14.99C107.55 9.19653 102.853 4.5 97.06 4.5Z" stroke="#B7B3A7" stroke-width="9" stroke-miterlimit="10"/>
             <path d="M31.57 21.5601H14.91V183.24H31.57V21.5601Z" stroke="#B7B3A7" stroke-width="3" stroke-miterlimit="10"/>
@@ -202,7 +202,7 @@ async function TableBordESA() {
         </div>
         <div class="ZoneTxt jauge">
           <div id="titreTab">Candidats sélectionnés</div> 
-          <svg width="113" height="199" viewBox="0 0 113 199" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="responsiveImgJ" width="113" height="199" viewBox="0 0 113 199" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_60_1058)">
             <path d="M97.06 4.5H14.99C9.19653 4.5 4.5 9.19653 4.5 14.99V183.27C4.5 189.063 9.19653 193.76 14.99 193.76H97.06C102.853 193.76 107.55 189.063 107.55 183.27V14.99C107.55 9.19653 102.853 4.5 97.06 4.5Z" stroke="#B7B3A7" stroke-width="9" stroke-miterlimit="10"/>
             <path d="M31.57 21.5601H14.91V183.24H31.57V21.5601Z" stroke="#B7B3A7" stroke-width="3" stroke-miterlimit="10"/>
@@ -238,7 +238,7 @@ async function TableBordESA() {
         <div class='custom-popup' id="map"></div>
       </div>
       <div class="decoTabBord">
-        <img src="images/DecoBouton.svg" alt="boutons tableau de bord"/>
+        <img class="responsiveImg" src="images/DecoBouton.svg" alt="boutons tableau de bord"/>
       </div>
     </div>
     <div class="ZoneTxt" id="selection">
@@ -279,7 +279,7 @@ TableBordESA();
 
 ///////////////////////////// Données ESA           ////////////            //////////////       ////////////
 
-///////////////////////////// carte           ////////////            //////////////       ////////////
+///////////////////////////// Carte           ////////////            //////////////       ////////////
 
  async function MapESA() {
     const response = await fetch(DonneESA);
