@@ -77,16 +77,25 @@
     /* !!!!!!!!!!!!!!!!!!!!      Astronaute    !!!!!!!!!!!!!!!!!!!!  */
 
     #astronaute{
-        height: 500px;
+        height: 300px;
     }
     
     .AsCombi{
-        height: 120px;
-        transform: translateX(-310px) rotateZ(-20deg) translateY(0px);
+        height: 76px;
+        transform: translateX(-190px) rotateZ(-20deg) translateY(0px);
     }
 
   }
 
 @media screen and (min-width: 700px) {
-        
+        /* !!!!!!!!!!!!!!!!!!!!      Astronaute    !!!!!!!!!!!!!!!!!!!!  */
+
+    #astronaute{
+        height: 400px;
+    }
+    
+    .AsCombi{
+        height: 100px;
+        transform: translateX(-250px) rotateZ(-20deg) translateY(0px);
+    }
 }

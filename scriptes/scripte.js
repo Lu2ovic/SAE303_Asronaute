@@ -16,10 +16,10 @@ async function ConstructionFuse() {
   const max = ListeNbr.reduce((a, b) => Math.max(a, b), -Infinity);
 
   for (let i = 0; i < data.length; i++) {
-    document.querySelector('.zone').innerHTML+= `<div class="fusee">
+    document.querySelector('.lesfusees').innerHTML+= `<div class="fusee">
           <div class="vol">
               <img class="hautF" src="images/HautFuseeFichier 5.svg" alt="hautFusee"/>
-              <div class="tronc" style="--taille: ${80+(520/max)*data[i].nbrPersonnesEspace}px;--FuseeColor: var(${ i%2 == 0 ? '--Bleu':'--BleuClaire'})"><p class="nbrFusee">${data[i].nbrPersonnesEspace}</p></div>
+              <div class="tronc" style="--taille: ${80+(520/max)*data[i].nbrPersonnesEspace}px;--FuseeColor: var(${ i%2 == 0 ? '--Bleu':'--BleuClaire'})"><p class="nbrFusee infoFusee">${data[i].nbrPersonnesEspace}</p></div>
               <img class="basF" src="images/BasFuseeFichier 6.svg" alt="basFusee"/>
               <div class="boost">
                   <div class="feu1">
@@ -48,7 +48,7 @@ async function ConstructionFuse() {
                   </div>
               </div>
           </div>
-          <p>${data[i].date}</p>
+          <p class="infoFusee">${data[i].date}</p>
       </div>`;
 
   }

@@ -78,6 +78,7 @@ p{
 .zone{
     padding: 16px;
     margin:10px;
+    margin-top:-510px;
     padding-top: 40px;
     display: flex;
     align-items: flex-start;
@@ -91,6 +92,15 @@ p{
     min-width: 80px;
     align-self:flex-end;
 }
+
+.lesfusees{
+    transform: scale(0.4);
+    display: flex;
+    align-items: flex-start;
+    margin-left: 0px;
+    transform-origin: bottom left;
+}
+
 
 .vol{
     transition: transform 0.5s ease-out 0.1s;
@@ -122,6 +132,10 @@ p{
     text-align: center;
     margin-top:0px;
     padding-top: 40px;
+}
+
+.infoFusee{
+    font-size: 24px;
 }
 
 
@@ -304,7 +318,7 @@ p{
 /* !!!!!!!!!!!!!!!!!!!!      Partie astronaute     !!!!!!!!!!!!!!!!!!!!  */
 
 #astronaute{
-    height: 500px;
+    height: 300px;
 }
 
 .inverse{
@@ -330,10 +344,10 @@ p{
 }
 
 .AsCombi{
-    height: 120px;
+    height: 76px;
     position: absolute;
     z-index: -1;
-    transform: translateX(-310px) rotateZ(-20deg) translateY(0px);
+    transform: translateX(-190px) rotateZ(-20deg) translateY(0px);
 }
 
 @keyframes gravite {
