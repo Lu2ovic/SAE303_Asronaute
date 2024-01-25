@@ -73,7 +73,7 @@ async function TableBordESA() {
     totalCandidat+= totalFemme + totalHomme;
     document.querySelector('.TableauBord').innerHTML+= ` <div class="ZoneTxt" id="titreTab">Répartition des postulants pour le poste d’astronaute a l’ESA en ${donne.Date}</div>
     <div id="repartition">
-      <div>
+      <div class="HCF">
         <div class="ZoneTxt"><div id="titreTab">HOMMES</div> ${totalHomme} candidatures</div>
         <div class="guide">
           <svg id="curceur" style="--position:${(100*totalHomme/totalCandidat)}%" data-name="curceur" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 73.04 107.29">

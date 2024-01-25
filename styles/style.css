@@ -409,8 +409,8 @@ p{
 
 #titreTab{
     grid-area: titre;
-    margin: 6px auto 10px auto;
-    font-size: 12px;
+    margin: 6px auto 34px auto;
+    font-size: 14px;
 }
 
 .ZoneTxt{
@@ -454,6 +454,12 @@ p{
 
 #repartition>div{
     display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#repartition>.HCF{
+    transform: scale(0.5);
 }
 
 .ZoneJauge{

@@ -15,12 +15,8 @@
     }
     
     .date{
-        font-family : "ff-cocon-pro";
-        font-size: 126px;
-        font-style: italic;
+        font-size: 70px;
         font-weight: 800;
-        text-align: center;
-        margin: auto;
     }
     
     .explication{
@@ -67,14 +63,8 @@
         font-size: 16px;
     }
     
-    .ZoneTxt{
-        font-size: 12px;
-        background-color: #171E2E;
-        margin:5px;
-        padding:10px;
-        color:var(--Txtnumerique);
-        border-radius: 4px;
-        text-align: center;
+    #repartition>.HCF{
+        transform: scale(0.5);
     }
 
 
@@ -84,4 +74,19 @@
         width: 30dvw;
     }
 
+    /* !!!!!!!!!!!!!!!!!!!!      Astronaute    !!!!!!!!!!!!!!!!!!!!  */
+
+    #astronaute{
+        height: 500px;
+    }
+    
+    .AsCombi{
+        height: 120px;
+        transform: translateX(-310px) rotateZ(-20deg) translateY(0px);
+    }
+
   }
+
+@media screen and (min-width: 700px) {
+        
+}

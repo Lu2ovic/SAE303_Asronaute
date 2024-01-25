@@ -15,12 +15,8 @@
     }
     
     .date{
-        font-family : "ff-cocon-pro";
         font-size: 126px;
-        font-style: italic;
         font-weight: 800;
-        text-align: center;
-        margin: auto;
     }
     
     .explication{
@@ -48,11 +44,16 @@
     .ESAresultat{
         display: flex;
     }
-  }
 
 
-  .guide{
-    width: 456px;
+    #repartition>.HCF{
+        transform: scale(1);
+    }
+
+.ZoneTxt{
+    font-size: 12px;
+    margin:5px;
+    padding:10px;
 }
 
 
@@ -62,3 +63,20 @@
     animation: arrive 0.8s ease-in-out forwards;
     margin-bottom: -110px;
 }
+
+
+    /* !!!!!!!!!!!!!!!!!!!!      Astronaute    !!!!!!!!!!!!!!!!!!!!  */
+#astronaute{
+    height: 500px;
+}
+
+.AsCombi{
+    height: 120px;
+    transform: translateX(-310px) rotateZ(-20deg) translateY(0px);
+}
+
+
+  }
+
+
+
