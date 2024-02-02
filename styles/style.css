@@ -18,8 +18,13 @@ body{
 
 H1{
     font-family : "ff-cocon-pro";
-    font-size: 76px;
+    font-size: 42px;
     text-align: center;
+}
+
+h2{
+    text-align: center;
+    font-size: 18px;
 }
 
 h3{
@@ -32,19 +37,34 @@ p{
     font-style: italic;
 }
 
+.lune{
+    height: 60dvw;
+    display: flex;
+    margin: -10dvw auto;
+    z-index: -1;
+    animation: luneRotate 180s linear infinite;
+}
+
+@keyframes luneRotate {
+    0% { 
+      transform: rotate(0deg);
+    }
+    50% { 
+        transform: rotate(60deg);
+    }
+    100% { 
+        transform: rotate(0deg);
+    }
+  }
 
 
 /* !!!!!!!!!!!!!!!!!!!!      frise chronologique      !!!!!!!!!!!!!!!!!!!!  */
 
 .évènement>div{
-    display: block;
-    background-color: #286292;
-    
+    display: flex;
+    align-items: center;
 }
 
-.évènement>div:nth-child(2){
-    background-color: #28924f;
-}
 
 .évènement{
     padding: 20px;
@@ -61,8 +81,7 @@ p{
 
 .explication{
     width: 40%;
-    height:40dvw;
-    background-color: #C33029;
+    margin: auto;
 }
 
 .explication>p{
@@ -127,6 +146,20 @@ p{
     width: 40px;
     left: 20px;
 }
+
+.animtronc{
+    animation: chargeFuse 0.8s ease;
+}
+
+@keyframes chargeFuse {
+    0% { 
+        height: 0px;
+    }
+    100% { 
+        height: var(--taille);
+    }
+  }
+
 
 .nbrFusee{
     text-align: center;
@@ -339,7 +372,7 @@ p{
     position: relative;
     z-index: 1;
     animation: gravite 38s linear infinite var(--Adeley);
-    width: 500px;
+    width: auto;
     margin: auto;
 }
 
@@ -365,7 +398,7 @@ p{
 /* !!!!!!!!!!!!!!!!!!!!      Partie astronaute     !!!!!!!!!!!!!!!!!!!!  */
 
 /* !!!!!!!!!!!!!!!!!!!!      Images Illustration    !!!!!!!!!!!!!!!!!!!!  */
-#imgS {
+.imgS {
     border-radius: 50px;
     filter: blur(5px);
     height:40dvw;
@@ -374,7 +407,7 @@ p{
     transform: scale(0.70) rotate(5deg);
   }
 
-  #imgS:hover{
+  .animage{
     filter: blur(0px);
     opacity: 100%;
     transform: scale(1) rotate(0deg);
@@ -506,7 +539,7 @@ p{
 
 #curceur{
     height: 100px;
-    offset-path: path('M2 1.5H208'); /* this is a square path */
+    offset-path: path('M6 6L449.46 8.2'); /* this is a square path */
     animation: arrive 0.8s ease-in-out forwards;
     margin-bottom: -110px;
 }
@@ -586,3 +619,37 @@ p{
 
 
 /* !!!!!!!!!!!!!!!!!!!!      Tableau de bord ESA    !!!!!!!!!!!!!!!!!!!!  */
+
+
+/* !!!!!!!!!!!!!!!!!!!!      Terre fin    !!!!!!!!!!!!!!!!!!!!  */
+/*M1 120C23 102 222.167 32.8333 319 0.5*/
+
+
+
+.terre{
+    height: 50dvw;
+    z-index: -1;
+    position: absolute;
+}
+
+.vaisseau1{
+    height: 20dvw;
+    offset-path: path('M1 120C23 102 222.167 32.8333 319 0.5'); /* this is a square path */
+    animation: decolle 1.6s ease-in-out forwards;
+    position: relative;
+    right: -40%;
+    top: 20dvw;
+}
+
+@keyframes decolle {
+    0% { 
+        height: 5dvw;
+        offset-distance: 0%;
+        transform: rotate(-5deg);
+    }
+    100% { 
+        height: 20dvw;
+        offset-distance: 100%;
+        transform: rotate(30deg);
+    }
+  }

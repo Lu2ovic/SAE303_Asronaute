@@ -290,6 +290,8 @@ TableBordESA();
     var map = L.map('map').setView([50.414418, 10.104369], 3);
 
     L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+	    subdomains: 'abcd',
         maxZoom: 20,
     }).addTo(map);
 
@@ -310,3 +312,21 @@ TableBordESA();
 
 
 MapESA();
+
+
+
+
+
+
+window.addEventListener('scroll', imgScroll);
+
+        function imgScroll() {
+            var elements = document.querySelectorAll('.imgS'); 
+            elements.forEach(function (element) {
+                if (element.getBoundingClientRect().top >=0 && element.getBoundingClientRect().top <=(window.innerHeight || document.documentElement.clientHeight)) {
+                    element.classList.add('animage'); 
+                }
+                else
+                    element.classList.remove('animage');
+            });
+        }
