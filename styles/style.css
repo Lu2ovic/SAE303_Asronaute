@@ -140,7 +140,9 @@ p{
 
 .tronc{
     width: 40px;
-    height: var(--taille);
+    height: 0px;
+    
+    transition: height 1s ease;
     background-color: var(--FuseeColor);
     position:relative;
     width: 40px;
@@ -148,17 +150,9 @@ p{
 }
 
 .animtronc{
-    animation: chargeFuse 0.8s ease;
+    height: var(--taille);
 }
 
-@keyframes chargeFuse {
-    0% { 
-        height: 0px;
-    }
-    100% { 
-        height: var(--taille);
-    }
-  }
 
 
 .nbrFusee{
@@ -474,7 +468,7 @@ p{
     width: 130px;
 }
 
-#Ljauge{
+.Ljauge{
     animation: Remplissage 0.8s ease-in-out forwards;
 }
 
@@ -537,11 +531,14 @@ p{
 }
 
 
-#curceur{
+.curceur{
     height: 100px;
     offset-path: path('M6 6L449.46 8.2'); /* this is a square path */
-    animation: arrive 0.8s ease-in-out forwards;
     margin-bottom: -110px;
+}
+
+.animCurceur{
+    animation: arrive 0.8s ease-in-out forwards;
 }
 
   
@@ -634,11 +631,15 @@ p{
 
 .vaisseau1{
     height: 20dvw;
-    offset-path: path('M1 120C23 102 222.167 32.8333 319 0.5'); /* this is a square path */
-    animation: decolle 1.6s ease-in-out forwards;
+    offset-path: path('M1 43C8.74843 36.6736 78.8952 12.364 113 1'); /* this is a square path */
     position: relative;
     right: -40%;
     top: 20dvw;
+}
+
+
+.vanimation{
+    animation: decolle 1.6s ease-in-out forwards;
 }
 
 @keyframes decolle {

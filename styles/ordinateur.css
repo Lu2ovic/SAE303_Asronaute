@@ -86,6 +86,10 @@
     transform: translateX(-310px) rotateZ(-20deg) translateY(0px);
 }
 
+.vaisseau1{
+    offset-path: path('M1 120C23 102 222.167 32.8333 319 0.5'); /* this is a square path */
+}
+
 
   }
 
