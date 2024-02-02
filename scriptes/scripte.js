@@ -303,7 +303,7 @@ TableBordESA();
 
 
     var Pcandidat = L.icon({
-        iconUrl: '../images/PointeurCandidat.svg',
+        iconUrl: 'images/PointeurCandidat.svg',
 
         iconSize:     [20, 40], // size of the icon
         iconAnchor:   [10, 40], // point of the icon which will correspond to marker's location
